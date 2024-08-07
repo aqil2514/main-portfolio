@@ -1,4 +1,4 @@
-interface NavigationLinks {
+export interface NavigationLinks {
   url: string;
   label_ID: string;
   label_EN: string;
