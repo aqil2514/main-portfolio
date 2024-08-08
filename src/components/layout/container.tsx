@@ -10,7 +10,7 @@ export default function MainContainer({
 }) {
     return(
 
-  <div className={clsx("bg-gray-900 w-full min-h-screen text-white", className)}>
+  <div className={clsx("bg-gray-900 w-full min-h-screen text-white py-20 px-4", className)}>
     {children}
   </div>
     )

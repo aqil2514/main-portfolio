@@ -13,6 +13,14 @@ namespace GenType {
     /** Nama iconnya */
     name: string;
     /** Sumber icon */
-    src:string;
+    src: string;
+  }
+
+  /** Interface umum untuk list */
+  export interface List<T = string> {
+    /** ID atau Value */
+    id: T;
+    /** Yang akan ditampilkan */
+    label: string;
   }
 }

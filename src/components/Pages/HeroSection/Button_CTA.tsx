@@ -1,7 +1,9 @@
+import Link from "next/link";
 import "./Button_CTA.css";
 
 export default function Button_CTA() {
   return (
+    <Link href={"/profile"}>
     <button className="animated-button block mx-auto">
       <span></span>
       <span></span>
@@ -9,5 +11,6 @@ export default function Button_CTA() {
       <span></span>
       Tentang Saya
     </button>
+    </Link>
   );
 }
