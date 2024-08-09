@@ -1,15 +1,15 @@
 "use client";
 import DialogComponent from "./Dialog";
-import { useProfileData } from "./ProfileProvider";
+import Profession from "./Profession";
 
 export default function Profile() {
-    const data = useProfileData();
   return (
     <div>
-      <div className="flex gap-4">
-        <h1>Profile Saya dalam bidang</h1>
+      <div className="flex gap-4 mb-4">
+        <h1>Profile Saya sebagai seorang</h1>
         <DialogComponent />
-        </div>
+      </div>
+      <Profession />
     </div>
   );
 }
