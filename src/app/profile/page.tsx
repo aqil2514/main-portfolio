@@ -1,6 +1,7 @@
 import MainContainer from "@/components/layout/container";
 import Profile from "@/components/Pages/Profile";
 import ProfileProvider from "@/components/Pages/Profile/ProfileProvider";
+import { getContent } from "@/lib/utils-server";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,9 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function ProfilePage() {
+  const content = getContent();
   return (
     <MainContainer>
-      <ProfileProvider>
+      <ProfileProvider content={content}>
         <Profile />
       </ProfileProvider>
     </MainContainer>

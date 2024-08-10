@@ -17,6 +17,7 @@ interface ProfileProviderProps {
   field: ProfileFieldType;
   setField: React.Dispatch<SetStateAction<ProfileFieldType>>;
   fieldMap: Map<ProfileFieldType, string>;
+  content: ContentLaguage.Pages;
 }
 
 const ProfileContext = createContext<ProfileProviderProps>(
@@ -25,8 +26,10 @@ const ProfileContext = createContext<ProfileProviderProps>(
 
 export default function ProfileProvider({
   children,
+  content
 }: {
   children: React.ReactNode;
+  content: ContentLaguage.Pages;
 }) {
   const [field, setField] = useState<ProfileFieldType>("unselected");
   const fieldMap = new Map<ProfileFieldType, string>(
@@ -37,6 +40,7 @@ export default function ProfileProvider({
     field,
     setField,
     fieldMap,
+    content
   };
 
   return (
