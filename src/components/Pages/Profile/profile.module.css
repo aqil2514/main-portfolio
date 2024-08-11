@@ -10,12 +10,8 @@
   }
 }
 
-.animationText {
+.fadeIn {
   opacity: 0;
   animation: fadeIn 0.5s forwards;
   transition: transform 0.3s ease;
-}
-
-.animationText:hover {
-  transform: scale(1.5);
 }

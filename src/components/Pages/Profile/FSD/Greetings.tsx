@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Button from "@/components/ui/button";
 import { useProfileData } from "../ProfileProvider";
 import styles from "../profile.module.css"; // Ganti dengan CSS Module jika digunakan
@@ -8,7 +9,7 @@ const AnimatedSpan: React.FC<{ delay: number; children: React.ReactNode }> = ({
   children,
 }) => (
   <span
-    className={`${styles.animationText} inline-block cursor-default`}
+    className={`${styles.fadeIn} inline-block cursor-default`}
     style={{ animationDelay: `${delay}s` }}
   >
     {children}
@@ -18,6 +19,19 @@ const AnimatedSpan: React.FC<{ delay: number; children: React.ReactNode }> = ({
 export default function Greetings() {
   const { content } = useProfileData();
   const greetingsWords = content.profile["full-stack-developer"].greetings;
+  
+  // State untuk mengatur visibilitas tombol
+  const [showButtons, setShowButtons] = useState(false);
+
+  useEffect(() => {
+    // Set timer sesuai dengan durasi animasi
+    const animationDuration = greetingsWords.split(" ").length * 0.1 + 0.1;
+    const timer = setTimeout(() => {
+      setShowButtons(true);
+    }, animationDuration * 1000);
+
+    return () => clearTimeout(timer); // Cleanup timer pada unmount
+  }, [greetingsWords]);
 
   return (
     <div>
@@ -28,9 +42,24 @@ export default function Greetings() {
           </AnimatedSpan>
         ))}
       </div>
-      <div>
-        <Button styleTemplate="yuhomyan" />
-      </div>
+      {showButtons && (
+        <div className="flex gap-4 justify-center mt-12">
+          <Button
+            styleNumber={7}
+            styleTemplate="yuhomyan"
+            className={`!font-young-serif !font-bold ${styles.fadeIn}`}
+          >
+            Sertifikat
+          </Button>
+          <Button
+            styleNumber={7}
+            styleTemplate="yuhomyan"
+            className={`!font-young-serif !font-bold ${styles.fadeIn}`}
+          >
+            Proyek
+          </Button>
+        </div>
+      )}
     </div>
   );
 }
