@@ -37,7 +37,7 @@ const NavigationLink = ({
 export default function NavigationBar() {
   const pathName = usePathname();
   return (
-    <div className="w-full h-8 text-white fixed top-0 left-0 p-4 z-50">
+    <div className="w-full h-8 text-white fixed top-0 left-0 px-4 pt-4 pb-8 z-50 bg-blue-900">
       <div className="flex justify-between">
         <h1>Muhamad Aqil Maulana</h1>
         <div className="flex gap-4">

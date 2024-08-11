@@ -2,16 +2,30 @@
  * Interface secara umum
  */
 namespace GenType {
-  /** Interface umum untuk icon */
-  export interface Icon {
-    /** Untuk memastikan unik */
+  export interface BasicInfo {
     id: string;
+    name: string;
+  }
+
+  export interface CardBasic extends BasicInfo{
+    desc_en: string;
+    desc_id: string;
+    ctaText?: string;
+    ctaLink?: string;
+  }
+
+  export interface CardImage extends CardBasic{
+    imageSrc: string;
+    imageAlt: string;
+    imageCapt: string;
+  }
+
+  /** Interface umum untuk icon */
+  export interface Icon extends BasicInfo {
     /** Link yang dituju (Jika digunakan sebagai navigasi) */
     link?: string;
     /** Alternatif teks jika gambar tidak aktif */
     alt: string;
-    /** Nama iconnya */
-    name: string;
     /** Sumber icon */
     src: string;
   }

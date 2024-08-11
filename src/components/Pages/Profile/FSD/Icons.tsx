@@ -5,7 +5,7 @@ import styles from "../profile.module.css"; // Ganti dengan CSS Module jika digu
 
 export default function Icons() {
   return (
-    <div className="flex gap-4 flex-wrap">
+    <div className="flex gap-4 flex-wrap max-h-[400px]">
       {icons.map((i) => (
         <figure key={i.id} className={`w-20 h-20 flex flex-col justify-center items-center my-2 gap-2 ${styles.fadeIn}`}>
           <Image alt={i.alt} src={i.src} height={64} width={64} />
