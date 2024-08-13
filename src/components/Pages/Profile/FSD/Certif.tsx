@@ -3,12 +3,10 @@ import {
   CardContent,
   CardDescription,
   CardFooter,
-  CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { certificates } from "./misc";
 import Image from "next/image";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import Button from "@/components/ui/button";
 import Link from "next/link";
 
@@ -42,13 +40,12 @@ export default function Certificate() {
                 href={certificate.ctaLink ? certificate.ctaLink : "#"}
                 target="_blank"
               >
-                <Button
+                {certificate.ctaLink && <Button
                   styleTemplate="yuhomyan"
                   styleNumber={1}
-                  disabled={!certificate.ctaLink}
                 >
-                  {certificate.ctaText ? certificate.ctaText : "Tidak tersedia"}
-                </Button>
+                  {certificate.ctaText}
+                </Button>}
               </Link>
             </CardFooter>
           </Card>

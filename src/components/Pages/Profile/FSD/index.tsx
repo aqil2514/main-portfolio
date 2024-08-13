@@ -1,10 +1,10 @@
-import { useRef } from "react";
 import Certificate from "./Certif";
 import Greetings from "./Greetings";
 import Icons from "./Icons";
+import { useProfileData } from "../ProfileProvider";
 
 export default function FullStackDeveloperProfession() {
-  const certifRef = useRef<null | HTMLDivElement>(null);
+  const { certifRef } = useProfileData();
   return (
     <div>
       <div className="grid grid-cols-[30%_auto] p-4 min-h-screen">

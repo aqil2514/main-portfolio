@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Button from "@/components/ui/button";
 import { useProfileData } from "../ProfileProvider";
 import styles from "../profile.module.css"; // Ganti dengan CSS Module jika digunakan
+import { useRouter } from "next/navigation";
+import { certifHandler, useAnimatedButton } from "./utils";
 
 // Komponen Span
 const AnimatedSpan: React.FC<{ delay: number; children: React.ReactNode }> = ({
@@ -17,21 +19,10 @@ const AnimatedSpan: React.FC<{ delay: number; children: React.ReactNode }> = ({
 );
 
 export default function Greetings() {
-  const { content } = useProfileData();
+  const { content, certifRef } = useProfileData();
   const greetingsWords = content.profile["full-stack-developer"].greetings;
-  
-  // State untuk mengatur visibilitas tombol
-  const [showButtons, setShowButtons] = useState(false);
-
-  useEffect(() => {
-    // Set timer sesuai dengan durasi animasi
-    const animationDuration = greetingsWords.split(" ").length * 0.1 + 0.1;
-    const timer = setTimeout(() => {
-      setShowButtons(true);
-    }, animationDuration * 1000);
-
-    return () => clearTimeout(timer); // Cleanup timer pada unmount
-  }, [greetingsWords]);
+  const router = useRouter();
+  const { showButtons } = useAnimatedButton(greetingsWords);
 
   return (
     <div>
@@ -48,6 +39,7 @@ export default function Greetings() {
             styleNumber={7}
             styleTemplate="yuhomyan"
             className={`!font-young-serif !font-bold ${styles.fadeIn}`}
+            onClick={() => certifHandler(certifRef)}
           >
             Sertifikat
           </Button>
@@ -55,6 +47,7 @@ export default function Greetings() {
             styleNumber={7}
             styleTemplate="yuhomyan"
             className={`!font-young-serif !font-bold ${styles.fadeIn}`}
+            onClick={() => router.replace("/projects?category=fsd")}
           >
             Proyek
           </Button>

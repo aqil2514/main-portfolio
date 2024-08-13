@@ -3,6 +3,7 @@ import React, {
   createContext,
   SetStateAction,
   useContext,
+  useRef,
   useState,
 } from "react";
 import { fieldList } from "./Dialog/misc";
@@ -18,6 +19,7 @@ interface ProfileProviderProps {
   setField: React.Dispatch<SetStateAction<ProfileFieldType>>;
   fieldMap: Map<ProfileFieldType, string>;
   content: ContentLaguage.Pages;
+  certifRef: React.MutableRefObject<HTMLDivElement | null>
 }
 
 const ProfileContext = createContext<ProfileProviderProps>(
@@ -35,12 +37,14 @@ export default function ProfileProvider({
   const fieldMap = new Map<ProfileFieldType, string>(
     fieldList.map((fl) => [fl.id, fl.label])
   );
+  const certifRef = useRef<null | HTMLDivElement>(null);
 
   const value: ProfileProviderProps = {
     field,
     setField,
     fieldMap,
-    content
+    content,
+    certifRef
   };
 
   return (
