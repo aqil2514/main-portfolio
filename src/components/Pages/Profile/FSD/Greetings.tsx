@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@/components/ui/button";
+import Button from "@/components/ui/shadcn-button";
 import { useProfileData } from "../ProfileProvider";
 import styles from "../profile.module.css"; // Ganti dengan CSS Module jika digunakan
 import { useRouter } from "next/navigation";

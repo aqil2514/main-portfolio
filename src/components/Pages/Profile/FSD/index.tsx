@@ -1,8 +1,7 @@
-import Certificate from "./Certif";
 import Greetings from "./Greetings";
 import { useProfileData } from "../ProfileProvider";
-import { AnimatedIcons } from "../components";
-import { icons } from "./misc";
+import { AnimatedIcons, Certificates } from "../components";
+import { certificates, icons } from "./misc";
 
 export default function FullStackDeveloperProfession() {
   const { certifRef } = useProfileData();
@@ -13,7 +12,7 @@ export default function FullStackDeveloperProfession() {
         <Greetings />
       </div>
       <div className="min-h-screen py-4" ref={certifRef}>
-        <Certificate />
+        <Certificates certificates={certificates} />
       </div>
     </div>
   );
