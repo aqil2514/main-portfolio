@@ -14,6 +14,9 @@ namespace GenType {
     };
     ctaText?: string;
     ctaLink?: string;
+    repoText?: string;
+    repoLink?: string;
+    group?: string[];
   }
 
   export interface CardImage extends CardBasic {
