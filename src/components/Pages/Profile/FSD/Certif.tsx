@@ -33,7 +33,7 @@ export default function Certificate() {
                   height={160}
                 />
               </figure>
-              <p className="font-sans text-base">{certificate.desc_id}</p>
+              <p className="font-sans text-base">{certificate.desc.id}</p>
             </CardContent>
             <CardFooter className="flex justify-end">
               <Link

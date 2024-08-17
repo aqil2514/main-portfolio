@@ -8,8 +8,10 @@ namespace GenType {
   }
 
   export interface CardBasic extends BasicInfo{
-    desc_en: string;
-    desc_id: string;
+    desc:{
+      id:string;
+      en:string;
+    }
     ctaText?: string;
     ctaLink?: string;
   }

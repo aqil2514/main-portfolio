@@ -2,6 +2,9 @@
   "profile": {
     "full-stack-developer": {
       "greetings": "Halo, saya Muhammad Aqil Maulana. Sebagai seorang Full Stack Developer, saya memiliki pengalaman dalam berbagai teknologi web seperti HTML, CSS, JavaScript, dan framework modern. Saya berkomitmen untuk menciptakan solusi digital yang inovatif dan efisien untuk memenuhi kebutuhan klien. Saya selalu berusaha untuk memberikan hasil terbaik dalam setiap proyek yang saya kerjakan."
+    },
+    "writer": {
+      "greetings" : "Sebagai seorang penulis, saya telah menunjukkan dedikasi dan produktivitas yang luar biasa dalam menciptakan konten berkualitas di berbagai platform. Dengan total lebih dari 500 artikel yang telah diterbitkan secara online, saya memiliki pengalaman yang cukup luas dalam menulis untuk audiens yang beragam. Karyanya dapat ditemukan di beberapa platform terkemuka seperti Kompasiana, IDN Times, Urban Depok, serta di blog pribadinya, Fero's Blog."
     }
   }
 }
