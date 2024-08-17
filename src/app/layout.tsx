@@ -34,9 +34,9 @@ export default function RootLayout({
 
   return (
     <html lang="id">
-      <body className={`${inter.className} ${poppins.className} ${youngSerif.className}`}>
+      <body className={`${inter.className} ${poppins.variable} ${youngSerif.variable}`}>
         <NavigationBar />
-        {children}\
+        {children}
         <Toaster />
       </body>
     </html>

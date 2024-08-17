@@ -1,10 +1,17 @@
 "use client";
+import React, { useEffect, useRef } from "react";
 import DialogComponent from "./Dialog";
 import Profession from "./Profession";
+import { applyTransition, styles } from "@/lib/utils-animation";
 
 export default function Profile() {
+  const profileRef = useRef<null | HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (profileRef.current) return applyTransition(profileRef.current);
+  }, []);
   return (
-    <div>
+    <div style={styles} ref={profileRef}>
       <div className="flex gap-4 mb-4">
         <h1>Profile Saya sebagai seorang</h1>
         <DialogComponent />
