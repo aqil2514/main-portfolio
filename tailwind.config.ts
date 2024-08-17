@@ -75,6 +75,7 @@ const config = {
       },
       fontFamily: {
         "young-serif": ["var(--young_serif)"],
+        "poppins" : ["var(--poppins)"]
       },
     },
   },

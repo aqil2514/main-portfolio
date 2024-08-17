@@ -19,6 +19,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useToast } from "@/components/ui/use-toast";
 
 /**
  * Komponen `AnimatedSpan` digunakan untuk menampilkan teks dengan efek animasi
@@ -91,57 +92,24 @@ export const Certificates: React.FC<{ certificates: GenType.CardImage[] }> = ({
   return (
     <div>
       <h1>Sertifikat</h1>
-      {/* <div className="flex justify-center px-2 gap-4">
-        {certificates.map((certificate) => (
-          <Card
-            key={certificate.id}
-            className="w-1/4 h-[480px] py-4 overflow-y-scroll no-scrollbar"
-          >
-            <CardTitle className="text-center">{certificate.name}</CardTitle>
-            <CardDescription className="text-xs text-center mt-2">
-              {certificate.imageCapt}
-            </CardDescription>
-            <CardContent>
-              <figure className="flex flex-col gap-2 items-center justify-center">
-                <Image
-                  alt={certificate.imageAlt}
-                  src={certificate.imageSrc}
-                  width={320}
-                  height={160}
-                />
-              </figure>
-              <p className="font-sans text-base">{certificate.desc.id}</p>
-            </CardContent>
-            <CardFooter className="flex justify-end">
-              <Link
-                href={certificate.ctaLink ? certificate.ctaLink : "#"}
-                target="_blank"
-              >
-                {certificate.ctaLink && (
-                  <Button styleTemplate="yuhomyan" styleNumber={1}>
-                    {certificate.ctaText}
-                  </Button>
-                )}
-              </Link>
-            </CardFooter>
-          </Card>
-        ))}
-      </div> */}
-      <Carousel opts={{ align: "start" }} className="w-full max-w-[1000px] p-4 mx-auto">
+      <Carousel
+        opts={{ align: "start" }}
+        className="w-full max-w-[1000px] p-4 mx-auto"
+      >
         <CarouselContent>
           {certificates.map((certificate) => (
             <CarouselItem
               key={certificate.id}
               className="md:basis-1/2 lg:basis-1/3"
             >
-              <Card className="h-[480px] py-4 overflow-y-scroll no-scrollbar">
-                <CardTitle className="text-center">
+              <Card className="h-[480px] py-4 overflow-y-scroll no-scrollbar bg-slate-800 px-2 border-double border-8 border-sky-400">
+                <CardTitle className="text-center text-white font-young-serif">
                   {certificate.name}
                 </CardTitle>
-                <CardDescription className="text-xs text-center mt-2">
+                <CardDescription className="text-sm text-center mt-2 font-poppins text-slate-50">
                   {certificate.imageCapt}
                 </CardDescription>
-                <CardContent>
+                <CardContent className="font-poppins text-gray-100">
                   <figure className="flex flex-col gap-2 items-center justify-center">
                     <Image
                       alt={certificate.imageAlt}
@@ -194,6 +162,24 @@ export const CTA_Buttons: React.FC<{ projectLink: string }> = ({
 }) => {
   const { certifRef } = useProfileData();
   const router = useRouter();
+  const { toast } = useToast();
+  const isNothingRef = certifRef.current === null;
+
+  const noRefHandler = () => {
+    toast({
+      title: "Tidak ada sertifikat",
+      description: "Bidang ini belum memiliki sertifikat apapun",
+      action: (
+        <Button
+          styleNumber={1}
+          styleTemplate="yuhomyan"
+          onClick={() => router.replace(projectLink)}
+        >
+          Project
+        </Button>
+      ),
+    });
+  };
 
   return (
     <div className="flex gap-4 justify-center mt-12">
@@ -201,7 +187,9 @@ export const CTA_Buttons: React.FC<{ projectLink: string }> = ({
         styleNumber={7}
         styleTemplate="yuhomyan"
         className={`!font-young-serif !font-bold ${styles.fadeIn}`}
-        onClick={() => certifHandler(certifRef)}
+        onClick={() =>
+          isNothingRef ? noRefHandler() : certifHandler(certifRef)
+        }
       >
         Sertifikat
       </Button>

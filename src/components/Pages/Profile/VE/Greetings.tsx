@@ -5,7 +5,7 @@ import { AnimatedSpan, CTA_Buttons } from "../components";
 
 export default function Greetings() {
   const { content } = useProfileData();
-  const greetingsWords = content.profile["full-stack-developer"].greetings;
+  const greetingsWords = content.profile["video-editor"].greetings;
   const { showButtons } = useAnimatedButton(greetingsWords);
 
   return (
@@ -17,7 +17,7 @@ export default function Greetings() {
           </AnimatedSpan>
         ))}
       </div>
-      {showButtons && <CTA_Buttons projectLink="/projects?category=fsd"/>}
+      {showButtons && <CTA_Buttons projectLink="/projects?category=ve"/>}
     </div>
   );
 }

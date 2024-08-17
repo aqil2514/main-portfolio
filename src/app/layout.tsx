@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Young_Serif } from "next/font/google";
+import { Inter, Poppins, Young_Serif } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/layout/Navigation";
+import { Toaster } from "@/components/ui/toaster";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -10,6 +11,14 @@ const youngSerif = Young_Serif({
   weight: "400",
   variable: "--young_serif",
 });
+
+const poppins = Poppins(
+  {
+    weight: ["100", "200", "300", "400", "500"],
+    subsets: ["latin"],
+    variable: "--poppins"
+  }
+)
 
 export const metadata: Metadata = {
   title: "Muhamad Aqil Maulana",
@@ -25,9 +34,10 @@ export default function RootLayout({
 
   return (
     <html lang="id">
-      <body className={`${inter.className} ${youngSerif.className}`}>
+      <body className={`${inter.className} ${poppins.className} ${youngSerif.className}`}>
         <NavigationBar />
-        {children}
+        {children}\
+        <Toaster />
       </body>
     </html>
   );
