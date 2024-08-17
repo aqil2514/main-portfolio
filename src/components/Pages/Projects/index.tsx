@@ -1,5 +1,6 @@
 "use client";
 
+import DialogComponent from "@/components/General/Dialog";
 import { applyTransition, styles } from "@/lib/utils-animation";
 import { useEffect, useRef } from "react";
 
@@ -10,7 +11,10 @@ export default function Projects() {
   }, []);
   return (
     <div style={styles} ref={projectsRef}>
-      Projects Page
+      <div className="flex gap-4 mb-4">
+        <h1>Project Saya sebagai seorang</h1>
+        <DialogComponent />
+      </div>
     </div>
   );
 }

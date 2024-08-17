@@ -1,6 +1,5 @@
 import FullStackDeveloperProfession from "./FSD";
 import WriterProfession from "./WR"
-import { useProfileData } from "./ProfileProvider";
 import VideoEditorProfession from "./VE";
 import useStore from "@/lib/store";
 
