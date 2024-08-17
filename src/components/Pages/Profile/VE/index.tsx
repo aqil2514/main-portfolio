@@ -1,6 +1,6 @@
 import { AnimatedIcons } from "../components";
 import Greetings from "./Greetings";
-import { icons } from "./misc";
+import { icons } from "./data";
 
 export default function VideoEditorProfession() {
   return (

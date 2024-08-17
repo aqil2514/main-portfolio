@@ -1,7 +1,7 @@
 import React from "react";
 import Greetings from "./Greetings";
 import { AnimatedIcons, Certificates } from "../components";
-import { certificates, icons } from "./misc";
+import { certificates, icons } from "./data";
 import { useProfileData } from "../ProfileProvider";
 
 export default function WriterProfession() {

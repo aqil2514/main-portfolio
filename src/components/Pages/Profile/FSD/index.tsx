@@ -1,7 +1,7 @@
 import Greetings from "./Greetings";
 import { useProfileData } from "../ProfileProvider";
 import { AnimatedIcons, Certificates } from "../components";
-import { certificates, icons } from "./misc";
+import { certificates, icons } from "./data";
 
 export default function FullStackDeveloperProfession() {
   const { certifRef } = useProfileData();
