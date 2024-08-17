@@ -3,14 +3,14 @@ import { ProjectsList } from "../components";
 import { useEffect, useRef } from "react";
 import { applyTransition, styles } from "@/lib/utils-animation";
 
-export default function FullStackDeveloperProjects() {
-  const fsdRef = useRef<null | HTMLDivElement>(null);
+export default function WriterProjects() {
+  const wrRef = useRef<null | HTMLDivElement>(null);
   useEffect(() => {
-    if (fsdRef.current) return applyTransition(fsdRef.current);
+    if (wrRef.current) return applyTransition(wrRef.current);
   }, []);
 
   return (
-    <div style={styles} className="grid grid-cols-2 gap-4" ref={fsdRef}>
+    <div style={styles} className="grid grid-cols-2 gap-4" ref={wrRef}>
       <ProjectsList projects={projects} />
     </div>
   );
