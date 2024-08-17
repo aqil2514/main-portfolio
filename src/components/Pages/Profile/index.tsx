@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import DialogComponent from "./Dialog";
+import DialogComponent from "../../General/Dialog";
 import Profession from "./Profession";
 import { applyTransition, styles } from "@/lib/utils-animation";
 

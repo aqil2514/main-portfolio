@@ -7,20 +7,26 @@ namespace GenType {
     name: string;
   }
 
-  export interface CardBasic extends BasicInfo{
-    desc:{
-      id:string;
-      en:string;
-    }
+  export interface CardBasic extends BasicInfo {
+    desc: {
+      id: string;
+      en: string;
+    };
     ctaText?: string;
     ctaLink?: string;
   }
 
-  export interface CardImage extends CardBasic{
+  export interface CardImage extends CardBasic {
     imageSrc: string;
     imageAlt: string;
     imageCapt: string;
   }
+
+  export type FieldType =
+    | "fullstack-developer"
+    | "writer"
+    | "video-editor"
+    | "unselected";
 
   /** Interface umum untuk icon */
   export interface Icon extends BasicInfo {
@@ -31,6 +37,8 @@ namespace GenType {
     /** Sumber icon */
     src: string;
   }
+
+  export type Language = "ID" | "EN";
 
   /** Interface umum untuk list */
   export interface List<T = string> {

@@ -7,10 +7,10 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import FieldSelection from "./FieldSelection";
-import { useProfileData } from "../ProfileProvider";
+import useStore from "@/lib/store";
 
 export default function DialogComponent() {
-  const { field, fieldMap } = useProfileData();
+  const {field, fieldMap} = useStore();
 
   const triggerText =
     field === "unselected" ? "Pilih bidang" : fieldMap.get(field);

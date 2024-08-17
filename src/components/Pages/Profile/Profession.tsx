@@ -2,9 +2,10 @@ import FullStackDeveloperProfession from "./FSD";
 import WriterProfession from "./WR"
 import { useProfileData } from "./ProfileProvider";
 import VideoEditorProfession from "./VE";
+import useStore from "@/lib/store";
 
 export default function Profession() {
-  const { field } = useProfileData();
+  const { field } = useStore();
   if (field === "fullstack-developer") return <FullStackDeveloperProfession />;
   else if(field === "writer") return <WriterProfession />
   else if(field === "video-editor") return <VideoEditorProfession />

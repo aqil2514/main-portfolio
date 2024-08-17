@@ -5,14 +5,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ProfileFieldType, useProfileData } from "../ProfileProvider";
 import { fieldList } from "./misc";
+import useStore from "@/lib/store";
 
 export default function FieldSelection() {
-  const { setField } = useProfileData();
+  const { setField } = useStore();
 
   return (
-    <Select onValueChange={(e) => setField(e as ProfileFieldType)}>
+    <Select onValueChange={(e) => setField(e as GenType.FieldType)}>
       <SelectTrigger>
         <SelectValue placeholder="Lihat Bidang" />
       </SelectTrigger>
