@@ -1,4 +1,4 @@
-import MainContainer from "@/components/layout/container";
+import MainContainer from "@/components/layout/Containers/Main";
 import Profile from "@/components/Pages/Profile";
 import ProfileProvider from "@/components/Pages/Profile/ProfileProvider";
 import { getContent } from "@/lib/utils-server";

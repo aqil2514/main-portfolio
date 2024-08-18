@@ -1,6 +1,7 @@
 import { useAnimatedButton } from "../utils";
 import { useProfileData } from "../ProfileProvider";
 import { AnimatedSpan, CTA_Buttons } from "../components";
+import GreetingsContainer from "@/components/layout/Containers/Greetings";
 
 export default function Greetings() {
   const { content } = useProfileData();
@@ -8,7 +9,7 @@ export default function Greetings() {
   const { showButtons } = useAnimatedButton(greetingsWords);
 
   return (
-    <div>
+    <GreetingsContainer>
       <div>
         {greetingsWords.split(" ").map((word, index) => (
           <AnimatedSpan key={index} delay={index * 0.1}>
@@ -17,6 +18,6 @@ export default function Greetings() {
         ))}
       </div>
       {showButtons && <CTA_Buttons projectLink="/projects?category=wr"/>}
-    </div>
+    </GreetingsContainer>
   );
 }

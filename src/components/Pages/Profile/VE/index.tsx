@@ -1,3 +1,4 @@
+import ProfessionContainer from "@/components/layout/Containers/Profession";
 import { AnimatedIcons } from "../components";
 import Greetings from "./Greetings";
 import { icons } from "./data";
@@ -5,10 +6,10 @@ import { icons } from "./data";
 export default function VideoEditorProfession() {
   return (
     <div>
-      <div className="grid grid-cols-[30%_auto] p-4 min-h-screen">
+      <ProfessionContainer>
         <AnimatedIcons icons={icons} />
         <Greetings />
-      </div>
+      </ProfessionContainer>
     </div>
   );
 }

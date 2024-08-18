@@ -10,7 +10,7 @@ export default function WriterProjects() {
   }, []);
 
   return (
-    <div style={styles} className="grid grid-cols-2 gap-4" ref={wrRef}>
+    <div style={styles} className="grid grid-cols-1 md:grid-cols-2 gap-4" ref={wrRef}>
       <ProjectsList projects={projects} />
     </div>
   );

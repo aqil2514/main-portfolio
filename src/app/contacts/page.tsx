@@ -1,4 +1,4 @@
-import MainContainer from "@/components/layout/container";
+import MainContainer from "@/components/layout/Containers/Main";
 import Contacts from "@/components/Pages/Contacts";
 import { Metadata } from "next";
 

@@ -15,8 +15,8 @@ export default function Projects() {
   }, [setField]);
   return (
     <div style={styles} ref={projectsRef}>
-      <div className="flex gap-4 mb-4">
-        <h1>Project Saya sebagai seorang</h1>
+      <div className="flex flex-col md:flex-row gap-4 mb-4">
+      <h1>Project Saya sebagai seorang</h1>
         <DialogComponent />
       </div>
       <Profession />

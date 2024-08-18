@@ -10,7 +10,7 @@ export default function VideoEditorProjects() {
   }, []);
 
   return (
-    <div style={styles} className="grid grid-cols-2 gap-4" ref={ve}>
+    <div style={styles} className="grid grid-cols-1 md:grid-cols-2 gap-4" ref={ve}>
       <ProjectsList projects={projects} />
     </div>
   );

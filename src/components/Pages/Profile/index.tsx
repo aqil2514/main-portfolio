@@ -15,7 +15,7 @@ export default function Profile() {
   }, [setField]);
   return (
     <div style={styles} ref={profileRef}>
-      <div className="flex gap-4 mb-4">
+      <div className="flex flex-col md:flex-row gap-4 mb-4">
         <h1>Profile Saya sebagai seorang</h1>
         <DialogComponent />
       </div>

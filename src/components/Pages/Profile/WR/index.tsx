@@ -3,16 +3,17 @@ import Greetings from "./Greetings";
 import { AnimatedIcons, Certificates } from "../components";
 import { certificates, icons } from "./data";
 import { useProfileData } from "../ProfileProvider";
+import ProfessionContainer from "@/components/layout/Containers/Profession";
 
 export default function WriterProfession() {
   const { certifRef } = useProfileData();
 
   return (
     <div>
-      <div className="grid grid-cols-[30%_auto] p-4 min-h-screen">
+      <ProfessionContainer>
         <AnimatedIcons icons={icons} />
         <Greetings />
-      </div>
+      </ProfessionContainer>
       <div className="min-h-screen py-4" ref={certifRef}>
         <Certificates certificates={certificates} />
       </div>

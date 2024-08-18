@@ -10,7 +10,7 @@ export default function FullStackDeveloperProjects() {
   }, []);
 
   return (
-    <div style={styles} className="grid grid-cols-2 gap-4" ref={fsdRef}>
+    <div style={styles} className="grid grid-cols-1 md:grid-cols-2 gap-4" ref={fsdRef}>
       <ProjectsList projects={projects} />
     </div>
   );
