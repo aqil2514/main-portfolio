@@ -13,5 +13,19 @@ export const projects: GenType.CardImage[] = [
       ctaText: "Lihat Tulisan",
       ctaLink: "https://www.kompasiana.com/muhammadaqilmaulana3384",
     },
+    {
+      id: "wr-buku",
+      name: "Buku Fisik",
+      desc: {
+        id: "Buku ini berhasil diterbitkan pada tahun 2021 di penerbit Guepedia.",
+        en: "This book was published in 2021 by Guepedia publisher",
+      },
+      imageSrc: "/images/Projects/wr-buku.jpg",
+      imageAlt: "Buku Fisik",
+      imageCapt: "Buku Fisik",
+      group: ["Creative Thinking", "Critical Thinking", "Research", "Grammar", "Editing"],
+      ctaText: "Lihat Buku",
+      ctaLink: "https://guepedia.com/book/20230",
+    },
   ];
   

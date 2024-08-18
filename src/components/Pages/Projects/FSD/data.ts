@@ -16,6 +16,8 @@ export const projects: GenType.CardImage[] = [
       "Next Auth",
       "Cloudinary",
       "Next Intl",
+      "Typescript",
+      "Tailwind"
     ],
     ctaText: "Lihat Situs",
     ctaLink: "https://gamelingo-tools.vercel.app/",
