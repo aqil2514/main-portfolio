@@ -33,11 +33,16 @@ export const ProjectsList:React.FC<{projects:GenType.CardImage[]}> = ({projects}
             {project.desc.id}
           </CardContent>
           <CardFooter className="flex gap-4">
-            <Link href={`${project.ctaLink}`}>
+            <Link href={`${project.ctaLink}`} target="_blank">
               <Button styleTemplate="yuhomyan" styleNumber={1}>
                 {project.ctaText}
               </Button>
             </Link>
+            {project.downloadLink && <Link href={`${project.downloadLink}`} download>
+              <Button styleTemplate="yuhomyan" styleNumber={1}>
+                {project.downloadText}
+              </Button>
+            </Link>}
             {project.repoLink && <Link href={`${project.repoLink}`}>
               <Button styleTemplate="yuhomyan" styleNumber={1}>
                 {project.repoText}

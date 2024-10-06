@@ -24,10 +24,6 @@ const ParticlesAnimation = () => {
     });
   }, []);
 
-  //@ts-ignore
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
 
   const options = useMemo(
     () => ({
@@ -104,8 +100,6 @@ const ParticlesAnimation = () => {
     return (
       <Particles
         id="tsparticles"
-        // @ts-ignore
-        particlesLoaded={particlesLoaded}
         // @ts-ignore
         options={options}
       />

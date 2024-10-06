@@ -18,7 +18,7 @@ export default function Greetings() {
           </AnimatedSpan>
         ))}
       </div>
-      {showButtons && <CTA_Buttons projectLink="/projects?category=ve"/>}
+      {showButtons && <CTA_Buttons projectLink="/projects?field=video-editor"/>}
     </GreetingsContainer>
   );
 }

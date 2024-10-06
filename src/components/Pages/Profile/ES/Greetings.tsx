@@ -5,7 +5,7 @@ import GreetingsContainer from "@/components/layout/Containers/Greetings";
 
 export default function Greetings() {
   const { content } = useProfileData();
-  const greetingsWords = content.profile.writer.greetings;
+  const greetingsWords = content.profile["excel-specialist"].greetings;
   const { showButtons } = useAnimatedButton(greetingsWords);
 
   return (
@@ -17,7 +17,7 @@ export default function Greetings() {
           </AnimatedSpan>
         ))}
       </div>
-      {showButtons && <CTA_Buttons projectLink="/projects?field=writer"/>}
+      {showButtons && <CTA_Buttons projectLink="/projects?field=excel-specialist"/>}
     </GreetingsContainer>
   );
 }

@@ -33,6 +33,7 @@ const NavigationLink = ({
       href={l.url}
       className={isOnPage ? ACTIVE_STYLE : HOVER_STYLE}
       onClick={onClick}
+      replace
     >
       {l.label_ID}
     </Link>

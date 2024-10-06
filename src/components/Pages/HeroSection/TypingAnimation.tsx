@@ -10,7 +10,9 @@ export default function TypingAnimation () {
         'seorang Penulis',
         2000,
         'seorang Video Editor',
-        1000
+        1000,
+        'seorang Excel Specialist',
+        2000
       ]}
       wrapper="span"
       cursor={true}

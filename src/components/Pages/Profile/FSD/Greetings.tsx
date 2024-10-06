@@ -18,7 +18,7 @@ export default function Greetings() {
           </AnimatedSpan>
         ))}
       </div>
-      {showButtons && <CTA_Buttons projectLink="/projects?category=fsd" />}
+      {showButtons && <CTA_Buttons projectLink="/projects?field=fullstack-developer" />}
     </GreetingsContainer>
   );
 }

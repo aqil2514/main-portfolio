@@ -11,4 +11,8 @@ export const fieldList: GenType.List<GenType.FieldType>[] = [
     id: "writer",
     label: "Penulis",
   },
+  {
+    id: "excel-specialist",
+    label: "Excel Specialist",
+  },
 ];
