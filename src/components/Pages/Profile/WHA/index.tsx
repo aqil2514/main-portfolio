@@ -5,7 +5,7 @@ import { certificates, icons } from "./data";
 import { useProfileData } from "../ProfileProvider";
 import ProfessionContainer from "@/components/layout/Containers/Profession";
 
-export default function WriterProfession() {
+export default function WareHouseAdminProfession() {
   const { certifRef } = useProfileData();
 
   return (

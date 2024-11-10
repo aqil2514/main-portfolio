@@ -1,5 +1,5 @@
 import ProfessionContainer from "@/components/layout/Containers/Profession";
-import { AnimatedIcons } from "../components";
+import { AnimatedIcons } from "../_components";
 import Greetings from "./Greetings";
 import { icons } from "./data";
 

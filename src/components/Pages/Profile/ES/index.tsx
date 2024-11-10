@@ -1,6 +1,6 @@
 import React from "react";
 import Greetings from "./Greetings";
-import { AnimatedIcons } from "../components";
+import { AnimatedIcons } from "../_components";
 import { icons } from "./data";
 import { useProfileData } from "../ProfileProvider";
 import ProfessionContainer from "@/components/layout/Containers/Profession";

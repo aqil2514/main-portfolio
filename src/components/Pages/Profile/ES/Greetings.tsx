@@ -1,6 +1,6 @@
 import { useAnimatedButton } from "../utils";
 import { useProfileData } from "../ProfileProvider";
-import { AnimatedSpan, CTA_Buttons } from "../components";
+import { AnimatedSpan, CTA_Buttons } from "../_components";
 import GreetingsContainer from "@/components/layout/Containers/Greetings";
 
 export default function Greetings() {

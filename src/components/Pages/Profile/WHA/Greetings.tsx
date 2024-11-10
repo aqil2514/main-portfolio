@@ -5,7 +5,7 @@ import GreetingsContainer from "@/components/layout/Containers/Greetings";
 
 export default function Greetings() {
   const { content } = useProfileData();
-  const greetingsWords = content.profile.writer.greetings;
+  const greetingsWords = content.profile["warehouse-admin"].greetings;
   const { showButtons } = useAnimatedButton(greetingsWords);
 
   return (

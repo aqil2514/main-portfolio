@@ -64,6 +64,7 @@ namespace GenType {
     | "writer"
     | "video-editor"
     | "excel-specialist"
+    | "warehouse-admin"
     | "unselected";
 
   /**

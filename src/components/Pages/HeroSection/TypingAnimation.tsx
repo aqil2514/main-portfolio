@@ -12,7 +12,9 @@ export default function TypingAnimation () {
         'seorang Video Editor',
         1000,
         'seorang Excel Specialist',
-        2000
+        2000,
+        'seorang Admin Gudang',
+        1000
       ]}
       wrapper="span"
       cursor={true}

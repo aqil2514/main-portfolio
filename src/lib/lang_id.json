@@ -11,6 +11,9 @@
     },
     "excel-specialist" : {
       "greetings" : "Saya juga seorang Excel Specialist. Pada portofolio ini, saya menyediakan beberapa template Excel yang dapat digunakan secara gratis maupun berbayar"
+    },
+    "warehouse-admin" : {
+      "greetings" : "Halo! Saya memiliki cukup pengetahuan sebagai seorang admin, khususnya seorang admin gudang. Saya suka dengan segala hal yang berhubungan dengan data, mulai dari input data, mengolah data, sampai ke menampilkan data. Dalam Excel, saya cukup percaya diri bahwa saya seseorang yang mahir dengan Excel. Saya bisa menggunakan VBA Excel untuk membuat pekerjaan semakin cepat dan akurat, seperti pembuatan User Defined Function, Subroutine, Userform, dan lain sebagainya."
     }
   }
 }

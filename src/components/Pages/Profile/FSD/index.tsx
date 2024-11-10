@@ -1,6 +1,6 @@
 import Greetings from "./Greetings";
 import { useProfileData } from "../ProfileProvider";
-import { AnimatedIcons, Certificates } from "../components";
+import { AnimatedIcons, Certificates } from "../_components";
 import { certificates, icons } from "./data";
 import ProfessionContainer from "@/components/layout/Containers/Profession";
 

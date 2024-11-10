@@ -31,7 +31,7 @@ export default function SocialMedia() {
       {sosmedIcon.map((sosmed) => (
         <div className="relative z-10 w-16 h-16" key={sosmed.id}>
           <Link href={sosmed.link as string} target="_blank">
-            <Image alt={sosmed.alt} fill src={sosmed.src} className="contrast-0 hover:contrast-100 duration-100" />
+            <Image alt={sosmed.alt} width={64} height={64} src={sosmed.src} className="contrast-0 hover:contrast-100 duration-100" />
           </Link>
         </div>
       ))}

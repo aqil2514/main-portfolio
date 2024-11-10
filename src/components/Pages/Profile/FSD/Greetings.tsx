@@ -1,7 +1,7 @@
 import React from "react";
 import { useProfileData } from "../ProfileProvider";
 import { useAnimatedButton } from "../utils";
-import { AnimatedSpan, CTA_Buttons } from "../components";
+import { AnimatedSpan, CTA_Buttons } from "../_components";
 import GreetingsContainer from "@/components/layout/Containers/Greetings";
 
 export default function Greetings() {

@@ -33,7 +33,7 @@ export default function ProfileProvider({
   const certifRef = useRef<null | HTMLDivElement>(null);
 
   const value: ProfileProviderProps = {
-    content,
+    content, // Content digunakan sebagai parameter. Datanya lihat di route /profile
     certifRef
   };
 
