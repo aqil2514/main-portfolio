@@ -49,6 +49,40 @@ export const icons: GenType.Icon[] = [
   },
 ];
 
+export const workExperience: GenType.WorkExperience[] = [
+  {
+    companyName: "PT. Alumindo Alloy Abadi",
+    companyLogo: "/images/WorkExperience/alumindo-alloy-abadi.webp",
+    position: "Warehouse Admin",
+    duration: {
+      startDate: "21 Maret 2024",
+      endDate: "present",
+    },
+    description: "Mengelola stok barang dan administrasi gudang secara efisien.",
+    location: "Cibitung, Kabupaten Bekasi",
+    responsibilities: [
+      "Terima barang masuk",
+      "Kontrol barang",
+      "Input barang ke ERP dan Excel",
+      "Transfer barang",
+      "Memotong stok"
+    ],
+    technologies: [
+      "Microsoft Excel",
+      "ERP"
+    ],
+    skills: [
+      "Manajemen Inventaris",
+      "VBA",
+      "Microsoft Excel",
+      "Administrasi Gudang",
+      "Microsoft Office",
+      "Analisis Data",
+      "Penggunaan ERP"
+    ]
+  }
+]
+
 // export const certificates: GenType.CardImage[] = [
 //   {
 //     id: "wr-cmcn",

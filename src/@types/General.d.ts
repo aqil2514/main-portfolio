@@ -2,7 +2,6 @@
  * Namespace untuk tipe-tipe umum
  */
 namespace GenType {
-  
   /**
    * Interface dasar yang berisi informasi umum.
    */
@@ -94,5 +93,87 @@ namespace GenType {
     id: T;
     /** Label yang ditampilkan untuk item list */
     label: string;
+  }
+
+  /**
+   * Represents a work experience record.
+   */
+  export interface WorkExperience {
+    /**
+     * The name of the company where the work experience took place.
+     */
+    companyName: string;
+
+    /**
+     * Picture. Use path of picture location
+     */
+
+    companyLogo: string;
+
+    /**
+     * The position or job title held during the work experience.
+     */
+    position: string;
+
+    /**
+     * The duration of the work experience, including start and end dates.
+     */
+    duration: {
+      /**
+       * The start date of the work experience (ISO format: YYYY-MM-DD).
+       */
+      startDate: string;
+
+      /**
+       * The end date of the work experience (ISO format: YYYY-MM-DD) or "Present" if currently active.
+       */
+      endDate: string | "Present";
+    };
+
+    /**
+     * A brief description of the job or role (optional).
+     */
+    description?: string;
+
+    /**
+     * A list of key responsibilities during the work experience (optional).
+     */
+    responsibilities?: string[];
+
+    /**
+     * A list of notable achievements during the work experience (optional).
+     */
+    achievements?: string[];
+
+    /**
+     * The location of the company (e.g., "Jakarta, Indonesia" or "Remote") (optional).
+     */
+    location?: string;
+
+    /**
+     * A list of tools or technologies used during the work experience (optional).
+     */
+    technologies?: string[];
+
+    /**
+     * A list of useful skill in this position
+     */
+
+    skills?: string[];
+
+    /**
+     * A list of references related to the work experience, including name and contact information (optional).
+     */
+    references?: {
+      /**
+       * The name of the reference.
+       */
+      name: string;
+
+      /**
+       * The contact information of the reference (e.g., email or phone number).
+       */
+      contact: string;
+    }[];
   }
 }
