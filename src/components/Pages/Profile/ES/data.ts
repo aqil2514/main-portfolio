@@ -24,3 +24,17 @@ export const icons: GenType.Icon[] = [
     src: "/images/Icons/es_macro.png",
   },
 ];
+
+export const certificates:GenType.CardImage[] = [
+  {
+    id: "es_excel-antierror",
+    name: "Excel Anti Eror",
+    imageSrc: "/images/Certificates/es_excel-antierror.png",
+    imageAlt: "Excel Anti Eror",
+    imageCapt: "Excel Anti Eror - Jobstreet",
+    desc: {
+      id: "Ini adalah sertifikat Excel yang saya dapat dari Jobstreet setelah mengikuti pelatihan Excel dalam mengatasi beberapa macam eror dalam operasi Excel.",
+      en: "This is my Excel certificate that I achieve from Jobstreet after following an Excel exercise in solving few errors in Excel operation",
+    }
+  },
+]
