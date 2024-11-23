@@ -9,7 +9,7 @@ export default function ProfessionContainer({
   className?: string;
 }) {
   return (
-    <div className={clsx("grid gap-4 md:grid-cols-[30%_auto] p-4", className)}>
+    <div style={{overflowWrap:"anywhere"}} className={clsx("grid gap-4 md:grid-cols-[30%_auto] p-4", className)}>
       {children}
     </div>
   );

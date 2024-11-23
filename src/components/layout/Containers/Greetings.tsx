@@ -10,7 +10,7 @@ export default function GreetingsContainer({
 }) {
     return(
 
-  <div className={clsx("border-t-8 w-3/5 md:w-full border-double border-white md:border-none pt-4", className)}>
+  <div className={clsx("border-t-8 md:w-full border-double border-white md:border-none pt-4", className)}>
     {children}
   </div>
     )

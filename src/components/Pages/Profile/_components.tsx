@@ -76,7 +76,7 @@ export const AnimatedIcons: React.FC<{ icons: GenType.Icon[] }> = ({
   const { windowWidth } = useAnimatedIcons();
 
   if (windowWidth < 768) return <>
-    <Carousel className="w-[55%]">
+    <Carousel>
       <CarouselContent>
       {icons.map((i) => (
         <CarouselItem key={i.id} className="basis-1/3">
