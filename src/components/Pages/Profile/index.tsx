@@ -24,7 +24,7 @@ export default function Profile() {
   }, [setField, searchParam]);
   return (
     <div style={styles} ref={profileRef}>
-      <div className="flex flex-col md:flex-row gap-4 mb-4">
+      <div className="flex flex-col md:flex-row gap-4 mb-4 overflow-hidden">
         <h1>Profile Saya sebagai seorang</h1>
         <DialogComponent />
       </div>

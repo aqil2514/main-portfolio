@@ -13,7 +13,7 @@ export default function Greetings() {
     <GreetingsContainer>
       <div>
         {greetingsWords.split(" ").map((word, index) => (
-          <AnimatedSpan key={index} delay={index * 0.1}>
+          <AnimatedSpan key={index} delay={index * 0.01}>
             {word + "\u00A0"}
           </AnimatedSpan>
         ))}

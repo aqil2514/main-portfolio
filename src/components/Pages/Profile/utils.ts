@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react";
 
-export const certifHandler = (certifRef:React.MutableRefObject<HTMLDivElement | null>) => {
-    if (certifRef.current) {
-      const target = certifRef.current;
-      const scrollY = target.offsetTop - 50;
+export const certifHandler = (
+  certifRef: React.MutableRefObject<HTMLDivElement | null>
+) => {
+  if (certifRef.current) {
+    const target = certifRef.current;
+    const scrollY = target.offsetTop - 50;
 
-      window.scrollTo({
-        top: scrollY,
-        behavior: "smooth",
-      });
-      return;
-    }
-
+    window.scrollTo({
+      top: scrollY,
+      behavior: "smooth",
+    });
     return;
-  };
+  }
 
-  /**
+  return;
+};
+
+/**
  * Hook `useAnimatedButton` digunakan untuk mengatur visibilitas tombol
  * berdasarkan durasi animasi dari teks `greetingsWords`. Hook ini mengembalikan
  * status tombol yang menentukan apakah tombol harus ditampilkan atau tidak.
@@ -42,7 +44,7 @@ export const useAnimatedButton = (greetingsWords: string) => {
 
   useEffect(() => {
     // Set timer sesuai dengan durasi animasi
-    const animationDuration = greetingsWords.split(" ").length * 0.1 + 0.1;
+    const animationDuration = greetingsWords.split(" ").length * 0.01 + 0.1;
     const timer = setTimeout(() => {
       setShowButtons(true);
     }, animationDuration * 1000);
@@ -51,4 +53,18 @@ export const useAnimatedButton = (greetingsWords: string) => {
   }, [greetingsWords]);
 
   return { showButtons };
+};
+
+export const useAnimatedIcons = () => {
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return { windowWidth };
 };

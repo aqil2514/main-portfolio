@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./profile.module.css"; // Ganti dengan CSS Module jika digunakan
 import Button from "@/components/ui/button";
-import { certifHandler } from "./utils";
+import { certifHandler, useAnimatedIcons } from "./utils";
 import { useProfileData } from "./ProfileProvider";
 import { useRouter } from "next/navigation";
 import {
@@ -72,19 +72,43 @@ export const AnimatedSpan: React.FC<{
  */
 export const AnimatedIcons: React.FC<{ icons: GenType.Icon[] }> = ({
   icons,
-}) => (
-  <div className="grid gap-4 grid-cols-4 max-h-[300px]">
-    {icons.map((i) => (
-      <figure
-        key={i.id}
-        className={`w-20 h-20 flex flex-col justify-center items-center my-2 gap-2 ${styles.fadeIn}`}
-      >
-        <Image alt={i.alt} src={i.src} height={64} width={64} />
-        <figcaption className="text-center">{i.name}</figcaption>
-      </figure>
-    ))}
-  </div>
-);
+}) => {
+  const { windowWidth } = useAnimatedIcons();
+
+  if (windowWidth < 768) return <>
+    <Carousel className="w-[55%]">
+      <CarouselContent>
+      {icons.map((i) => (
+        <CarouselItem key={i.id} className="basis-1/3">
+        <figure
+          key={i.id}
+          className={`relative max-w-32 max-h-32 flex flex-col justify-center items-center my-2 gap-2 ${styles.fadeIn}`}
+        >
+          <Image alt={i.alt} src={i.src} height={64} width={64} />
+          <figcaption className="text-center">{i.name}</figcaption>
+        </figure>
+        </CarouselItem>
+      ))}
+      </CarouselContent>
+      <CarouselNext />
+      <CarouselPrevious />
+    </Carousel>
+  </>;
+
+  return (
+    <div className="grid gap-4 grid-cols-4 max-h-[300px]">
+      {icons.map((i) => (
+        <figure
+          key={i.id}
+          className={`w-20 h-20 flex flex-col justify-center items-center my-2 gap-2 ${styles.fadeIn}`}
+        >
+          <Image alt={i.alt} src={i.src} height={64} width={64} />
+          <figcaption className="text-center">{i.name}</figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+};
 
 export const Certificates: React.FC<{ certificates: GenType.CardImage[] }> = ({
   certificates,
