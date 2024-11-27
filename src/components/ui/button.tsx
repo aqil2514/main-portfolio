@@ -2,7 +2,7 @@
 import yuhomyan from "./modules/button/yuhomyan.module.css";
 import defaultStyle from "./modules/button/default.module.css";
 import React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/utils";
 
 /**
  * Style template yang saya gunakan.

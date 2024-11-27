@@ -1,7 +1,7 @@
 import { projects } from "./data";
 import { ProjectsList } from "../components";
 import { useEffect, useRef } from "react";
-import { applyTransition, styles } from "@/lib/utils-animation";
+import { applyTransition, styles } from "@/utils/utils-animation";
 
 export default function WriterProjects() {
   const wrRef = useRef<null | HTMLDivElement>(null);

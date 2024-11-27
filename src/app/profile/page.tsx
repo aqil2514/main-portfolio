@@ -1,7 +1,7 @@
 import MainContainer from "@/components/layout/Containers/Main";
 import Profile from "@/components/Pages/Profile";
 import ProfileProvider from "@/components/Pages/Profile/ProfileProvider";
-import { getContent } from "@/lib/utils-server";
+import { getContent } from "@/utils/utils-server";
 import { Metadata } from "next";
 import { Suspense } from "react";
 

@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import DialogComponent from "../../General/Dialog";
 import Profession from "./Profession";
-import { applyTransition, styles } from "@/lib/utils-animation";
+import { applyTransition, styles } from "@/utils/utils-animation";
 import useStore from "@/lib/store";
 import { useSearchParams } from "next/navigation";
 

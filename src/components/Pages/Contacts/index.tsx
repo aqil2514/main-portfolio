@@ -1,5 +1,5 @@
 "use client";
-import { applyTransition, styles } from "@/lib/utils-animation";
+import { applyTransition, styles } from "@/utils/utils-animation";
 import ContactsProvider from "./ContactsProvider";
 import Container from "./Container";
 import { useEffect, useRef } from "react";

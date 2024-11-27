@@ -29,12 +29,23 @@ export const certificates:GenType.CardImage[] = [
   {
     id: "es_excel-antierror",
     name: "Excel Anti Eror",
-    imageSrc: "/images/Certificates/es_excel-antierror.png",
+    imageSrc: "/images/Certificates/es_excel-anti-error.jpg",
     imageAlt: "Excel Anti Eror",
     imageCapt: "Excel Anti Eror - Jobstreet",
     desc: {
-      id: "Ini adalah sertifikat Excel yang saya dapat dari Jobstreet setelah mengikuti pelatihan Excel dalam mengatasi beberapa macam eror dalam operasi Excel.",
+      id: "Ini adalah sertifikat Excel yang saya dapat dari Jobstreet setelah mengikuti pelatihan Excel dalam mengatasi beberapa macam eror dalam operasi Excel. Seperti apa yang menyebabkan error #DIV/0!, #REF!, #N/A, penggunaan rumus IFERROR, dsb",
       en: "This is my Excel certificate that I achieve from Jobstreet after following an Excel exercise in solving few errors in Excel operation",
+    }
+  },
+  {
+    id: "es_data-analyst",
+    name: "Analisis Data Excel",
+    imageSrc: "/images/Certificates/es_Analisis-Data.jpg",
+    imageAlt: "Analisis Data Excel",
+    imageCapt: "Analisis Data Excel - Jobstreet",
+    desc: {
+      id: "Mempelajari cara menggunakan Excel sebagai analisis data, di antaranya juga penggunaan Pivot Table, visualisasi data, dsb..",
+      en: "Using how to use Excel for data analyst. Also learning Pivot Table, data visualization, etc.",
     }
   },
 ]
