@@ -48,4 +48,15 @@ export const certificates:GenType.CardImage[] = [
       en: "Using how to use Excel for data analyst. Also learning Pivot Table, data visualization, etc.",
     }
   },
+  {
+    id: "es_vlookup",
+    name: "Vlook Up, Hlook Up, Index-Match",
+    imageSrc: "/images/Certificates/es_vlookup.jpg",
+    imageAlt: "Vlook Up, Hlook Up, Index-Match",
+    imageCapt: "Vlook Up, Hlook Up, Index-Match - MySkill x Lion Parcel",
+    desc: {
+      id: "Mempelajari cara penggunaan rumus vlook up, hlook up, dan index-match untuk keperluan pekerjaan.",
+      en: "Using how to use a vlook up, vlook up, and index-match formula for job.",
+    }
+  },
 ]

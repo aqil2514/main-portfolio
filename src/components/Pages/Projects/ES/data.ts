@@ -16,4 +16,20 @@ export const projects: GenType.CardImage[] = [
     downloadLink:"/files/excel/Free - Absen Kerja.xlsx",
     downloadText: "Unduh Template"
   },
+  {
+    id: "es-vlookup",
+    name: "Vlook Up, Hlook Up, Index-Match",
+    desc: {
+      id: "Project yang digunakan untuk klaim sertifikat Vlook Up, Hlookup, dan Index-Match",
+      en: "Project to clain a certificate.",
+    },
+    imageSrc: "/images/Projects/es_vlookup.png",
+    imageAlt: "Up, Hlook Up, Index-Match",
+    imageCapt: "Up, Hlook Up, Index-Match",
+    group: ["Formula and Functions"],
+    ctaText: "Lihat Template",
+    ctaLink: "https://1drv.ms/x/c/1ce9c61702ed3db2/EZQB8rEXYtpDjC3wWX_ywhQBnjlHZZdXE7KOBpP7Kocpnw?e=JHOav2",
+    downloadLink:"/files/excel/Certificate - Vlook Up, Hlook Up, Index-Match.xlsx",
+    downloadText: "Unduh File"
+  },
 ];
