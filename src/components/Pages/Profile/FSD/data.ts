@@ -28,14 +28,14 @@ export const certificates: GenType.CardImage[] = [
     ctaText: "Lihat Sertifikat",
   },
   {
-    id: "fsdc-nothing",
-    name: "Nothing Else",
-    imageSrc: "/images/Certificates/fsd-nothing.webp",
-    imageAlt: "Nothin Else",
-    imageCapt: "Belajar Otodidak",
+    id: "fsdc-intro-sofware-engineering",
+    name: "Intro to Software Engineering",
+    imageSrc: "/images/Certificates/fsd-intro-software-engineering.jpg",
+    imageAlt: "Intro to Software Engineering",
+    imageCapt: "Intro to Software Engineering - RevoU",
     desc: {
-      id: "Setelahnya, saya belajar full secara otodidak. Dengan menggunakan situs roadmap.sh sebagai alur belajar, saya bisa sampai di titik ini.",
-      en: "Then, I full learn by my self. With using roadmap.sh as a roadmap learning, I can be here.",
+      id: "Saya mengikuti short class dari RevoU dalam pengenalan Software Engineering.",
+      en: "I participated in short class by RevoU.",
     },
   },
 ];
