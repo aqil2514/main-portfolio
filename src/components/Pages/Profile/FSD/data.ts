@@ -28,6 +28,34 @@ export const certificates: GenType.CardImage[] = [
     ctaText: "Lihat Sertifikat",
   },
   {
+    id: "fsdc-fedl",
+    name: "Front End Development Libraries",
+    imageSrc: "/images/Certificates/fsd-fedl.jpg",
+    imageAlt: "Front End Certificate",
+    imageCapt: "Front End Certificate - Free Code Camp",
+    desc: {
+      id: "Di sini, saya mempelajari penggunaan library Front End seperti React",
+      en: "Here, I learn how to use a Front End Library like React.",
+    },
+    ctaLink:
+      "https://www.freecodecamp.org/certification/aqil2514/front-end-development-libraries",
+    ctaText: "Lihat Sertifikat",
+  },
+  {
+    id: "fsdc-fewd",
+    name: "Frontend in Website Development",
+    imageSrc: "/images/Certificates/fsd-fewd.jpg",
+    imageAlt: "Front End Certificate",
+    imageCapt: "Front End Certificate - MySkill",
+    desc: {
+      id: "Di sini, saya mempelajari dasar-dasar menjadi seorang front end developer",
+      en: "Here, I learn basics of Front End Developert.",
+    },
+    ctaLink:
+      "https://drive.google.com/open?id=1-VJsAg9OtqkArabLnxnWfSx0DnD4eI4f&usp=drive_fs",
+    ctaText: "Lihat Sertifikat",
+  },
+  {
     id: "fsdc-intro-sofware-engineering",
     name: "Intro to Software Engineering",
     imageSrc: "/images/Certificates/fsd-intro-software-engineering.jpg",
@@ -37,6 +65,9 @@ export const certificates: GenType.CardImage[] = [
       id: "Saya mengikuti short class dari RevoU dalam pengenalan Software Engineering.",
       en: "I participated in short class by RevoU.",
     },
+    ctaLink:
+      "https://drive.google.com/open?id=1-SxiOh16IEDbR-8PMRI9gy5FvV3lUT1f&usp=drive_fs",
+    ctaText: "Lihat Sertifikat",
   },
 ];
 
